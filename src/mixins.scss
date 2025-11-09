@@ -1,45 +1,41 @@
-// universals style
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+// colors
+$light-text: #f5f5f5;
+$white: #ffffff;
+$gray: #414141;
+$black: black;
+$dark-bg: #1a1a1a;
+$overlay: #ffffff1a;
 
-// Colors - keeping it simple but organized
-$hero-text: #f5f5f5;
-$cta-background: #ffffff;
-$brand-accent: #414141;
-$nav-text: black;
-$section-dark: #1a1a1a;
-$card-overlay: #ffffff1a;
+// font sizes
+$small: 14px;
+$medium: 20px;
+$large: 28px;
+$xl: 32px;
+$huge: 96px;
 
-// Typography
-$font-small: 14px;
-$font-medium: 20px;
-$font-large: 28px;
-$font-xl: 32px;
-$font-hero: 96px;
+// space values
+$small-space: 10px;
+$med-space: 20px;
+$big-space: 40px;
+$huge-space: 60px;
 
-// Spacing
-$spacing-sm: 10px;
-$spacing-md: 20px;
-$spacing-lg: 40px;
-$spacing-xl: 60px;
-
-
-
-// Button style mixin 
-@mixin button-style($bg-color, $text-color) {
-  background: $bg-color;
-  color: $text-color;
+//button mixin
+@mixin btn($bg, $color) {
+  background: $bg;
+  color: $color;
   padding: 12px 30px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
-  gap: $spacing-sm;
+  gap: $small-space;
   transition: transform 0.3s;
 
   &:hover {
@@ -48,13 +44,13 @@ $spacing-xl: 60px;
 
   &::after {
     content: "→";
-    font-size: $font-medium;
+    font-size: $medium;
   }
 }
 
-// Responsive mixin
-@mixin mobile {
-  @media screen and (max-width: 768px) {
+// mobile
+@mixin phone {
+  @media (max-width: 768px) {
     @content;
   }
 }

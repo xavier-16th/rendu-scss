@@ -1,18 +1,16 @@
 @use "mixins" as *;
 
 body {
-  font-family: BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial,
-    sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   overflow-x: hidden;
-  background-color: $nav-text;
+  background-color: $black;
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 $spacing-md;
+  padding: 0 $med-space;
 }
-
 
 .hero {
   background-image: url("/OvO label.jpg");
@@ -20,10 +18,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  padding: $spacing-lg 0;
+  padding: $big-space 0;
   position: relative;
   overflow: hidden;
-  color: $hero-text;
+  color: $light-text;
 
   &::before {
     content: "";
@@ -40,23 +38,23 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $spacing-md $spacing-lg;
+  padding: $med-space $big-space;
   position: relative;
   z-index: 10;
 
   .logo {
     font-size: 50px;
     font-weight: 700;
-    color: $nav-text;
+    color: $black;
   }
 
   nav {
     display: flex;
-    gap: $spacing-lg;
+    gap: $big-space;
     align-items: center;
 
     a {
-      color: $nav-text;
+      color: $black;
       text-decoration: none;
       font-size: 24px;
       transition: opacity 0.3s;
@@ -69,24 +67,24 @@ header {
 }
 
 .cta-button {
-  @include button-style($cta-background, $nav-text);
+  @include btn($white, $black);
 }
 
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: $spacing-xl;
-  padding: 80px $spacing-lg;
+  gap: $huge-space;
+  padding: 80px $big-space;
   align-items: center;
   position: relative;
   z-index: 5;
 
   .hero-text {
     h1 {
-      font-size: $font-hero;
+      font-size: $huge;
       font-weight: 800;
       line-height: 1;
-      margin-bottom: $spacing-lg;
+      margin-bottom: $big-space;
     }
   }
 
@@ -113,13 +111,13 @@ header {
     max-width: 300px;
 
     h3 {
-      font-size: $font-xl;
-      margin-bottom: $spacing-md;
+      font-size: $xl;
+      margin-bottom: $med-space;
       line-height: 1.2;
     }
 
     p {
-      font-size: $font-small;
+      font-size: $small;
       opacity: 0.8;
       line-height: 1.6;
     }
@@ -128,62 +126,62 @@ header {
 .services {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: $spacing-lg;
-  padding: $spacing-lg;
+  gap: $big-space;
+  padding: $big-space;
   position: relative;
   z-index: 5;
 
   .service-item {
     opacity: 0.9;
-    color: $hero-text;
+    color: $light-text;
 
     span {
       display: block;
-      font-size: $font-large;
+      font-size: $large;
       opacity: 0.6;
       margin-bottom: 8px;
     }
 
     h4 {
-      font-size: $font-xl;
+      font-size: $xl;
       font-weight: 600;
     }
   }
 }
 
 .trusted-brands {
-  background: $section-dark;
-  padding: $spacing-xl $spacing-lg;
+  background: $dark-bg;
+  padding: $huge-space $big-space;
   border-bottom-left-radius: 80px;
   border-bottom-right-radius: 80px;
 
   h3 {
-    color: $hero-text;
-    font-size: $font-large;
+    color: $light-text;
+    font-size: $large;
     opacity: 0.6;
-    margin-bottom: $spacing-lg;
+    margin-bottom: $big-space;
   }
 }
 
 .brands-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: $spacing-xl;
+  gap: $huge-space;
   align-items: center;
 
   .brand-item {
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: $font-medium;
+    font-size: $medium;
     font-weight: 600;
-    color: $hero-text;
+    color: $light-text;
   }
 
   .brand-icon {
-    width: $spacing-lg;
-    height: $spacing-lg;
-    background: $card-overlay;
+    width: $big-space;
+    height: $big-space;
+    background: $overlay;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -192,11 +190,11 @@ header {
 }
 
 .about {
-  background: $nav-text;
-  padding: 120px $spacing-lg;
+  background: $black;
+  padding: 120px $big-space;
 
   .about-content {
-    color: $hero-text;
+    color: $light-text;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
@@ -205,25 +203,25 @@ header {
 
   .about-text {
     span {
-      color: $brand-accent;
-      font-size: $font-small;
+      color: $gray;
+      font-size: $small;
       text-transform: uppercase;
       letter-spacing: 2px;
       display: block;
-      margin-bottom: $spacing-md;
+      margin-bottom: $med-space;
     }
 
     h2 {
       font-size: 64px;
       font-weight: 800;
       line-height: 1.1;
-      margin-bottom: $spacing-lg;
+      margin-bottom: $big-space;
     }
   }
 
   .about-info {
     h3 {
-      font-size: $font-large;
+      font-size: $large;
       line-height: 1.4;
       margin-bottom: 30px;
     }
@@ -231,11 +229,11 @@ header {
     p {
       opacity: 0.6;
       line-height: 1.8;
-      margin-bottom: $spacing-sm;
+      margin-bottom: $small-space;
     }
 
     .cta-button {
-      @include button-style($brand-accent, $cta-background);
+      @include btn($gray, $white);
       margin-top: 30px;
     }
   }
@@ -245,10 +243,10 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-top: $spacing-xl;
+  margin-top: $huge-space;
 
   .portfolio-item {
-    background: $card-overlay;
+    background: $overlay;
     border-radius: 20px;
     overflow: hidden;
     height: 400px;
@@ -272,8 +270,8 @@ header {
   }
 }
 
-// RESPONSIVE DESIGN mobile
-@include mobile {
+// mobile responsive
+@include phone {
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
@@ -285,7 +283,7 @@ header {
     .hero-quote {
       position: static;
       transform: none;
-      margin-top: $spacing-md;
+      margin-top: $med-space;
     }
   }
 
